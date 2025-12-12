@@ -1,15 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 @app.route('/home')
 def home():
-    return 'Welcome to my ShareItHub website!'
+    return render_template('home.html')
 
 @app.route('/about')
-def about_us():
-    return 'ShareItHub is a multi-user blogging and social posting platform built with Python and Flask.'
+def about():
+    return render_template('about.html')
 
 
 if __name__ == "__main__":
