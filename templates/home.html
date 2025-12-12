@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Welcome to my ShareItHub website!</h1>
+    <h1>Welcome to my ShareItHub website!</h1><br><br>
     {% for post in posts %}
         <h2>{{ post.title }}</h2>
         <p>By {{ post.author }} on {{ post.date_posted }}</p>
-        <h4>{{ post.content }}</h4>
+        <h5>{{ post.content }}</h5>
     {% endfor %}
 {% endblock content %}
 
