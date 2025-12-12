@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
-        <title>ShareItHub - {{ title }}</title>
-    {% else %}
-        <title>ShareItHub</title>
-    {% endif %}
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <h1>Welcome to my ShareItHub website!</h1>
     {% for post in posts %}
         <h2>{{ post.title }}</h2>
         <p>By {{ post.author }} on {{ post.date_posted }}</p>
         <h4>{{ post.content }}</h4>
     {% endfor %}
+{% endblock content %}
 
-</body>
-</html>
+
