@@ -1,3 +1,11 @@
+body {
+  background: #8fa9a4;
+  color: #333;
+}
+main.container {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
 #logo {
     width: 130px;
     height: 72px;
@@ -27,6 +35,75 @@
 
 .nav-item .nav-link:not(.dropdown-toggle):hover::after {
     width: 100%;
+}
+/*Post cards (Home page)*/
+.content-section {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+/* Post header (author + date) */
+.article-metadata {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.article-metadata a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.article-metadata a:hover {
+  text-decoration: underline;
+}
+
+/* Post title */
+.article-title {
+  text-decoration: none;
+  font-weight: 700;
+  color: #222;
+}
+
+.article-title:hover {
+  text-decoration: underline;
+}
+
+/* Post content */
+.article-content {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/*Sidebar styling*/
+.content-section h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.content-section .list-group-item {
+  border-color: #eee;
+  padding: 0.9rem 1rem;
+}
+
+/*Responsive tweaks */
+@media (max-width: 768px) {
+  main.container {
+    padding-top: 1rem;
+  }
+
+  .content-section {
+    border-radius: 8px;
+    padding: 1rem;
+  }
 }
 
 
