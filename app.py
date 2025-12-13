@@ -1,13 +1,17 @@
 from flask import Flask, render_template,url_for
 from forms import RegistrationForm, LoginForm
 from dotenv import load_dotenv
+from pathlib import Path
 import os
+
 
 app = Flask(__name__)
 
 # Load the .env file from the config folder
-load_dotenv("shareithub/config/.env")
+BASE_DIR = Path(__file__).resolve().parent
+load_dotenv(BASE_DIR / "config" / ".env")
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
 
 posts = [
     {
@@ -38,12 +42,12 @@ def about():
 
 @app.route('/register')
 def register():
-    form = RegistrationForm
+    form = RegistrationForm()
     return render_template('register.html', title='Register', form=form)
 
 @app.route('/login')
 def login():
-    form = LoginForm
+    form = LoginForm()
     return render_template('login.html', title='Login', form=form)
 
 
