@@ -1,0 +1,32 @@
+#logo {
+    width: 130px;
+    height: 72px;
+    border: none;
+    border-radius: 20%;
+}
+.nav-item{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-item .nav-link:not(.dropdown-toggle)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.nav-item .nav-link:not(.dropdown-toggle):hover::after {
+    width: 100%;
+}
+
+
