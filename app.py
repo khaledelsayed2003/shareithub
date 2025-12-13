@@ -1,6 +1,12 @@
 from flask import Flask, render_template,url_for
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
+
+# Load the .env file from the config folder
+load_dotenv("shareithub/config/.env")
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 posts = [
     {
